@@ -14,20 +14,21 @@ body.dark {
   background-color: #191716 !important;
 }
 
-.card {
+.canvas__container {
   border: 1px solid #000;
-  height: 300px;
+  height: 500px;
   margin-top: 2rem;
-  width: 300px;
+  width: 500px;
+  color: #000;
 }
 
 .nav {
   border-bottom: 1px solid #e5e5e2;
+  box-shadow: 0 2px 4px #e5e5e2;
   padding: 0 .5rem;
   position: sticky;
   top: 0;
   transition: all .5s ease;
-  box-shadow: 0 2px 4px #e5e5e2;
   z-index: 1010;
 }
 
@@ -39,6 +40,8 @@ body.dark {
 body.dark .nav {
   background-color: #191716;
   color: #fff;
+  box-shadow: none;
+  border-bottom: 1px solid #262730;
 }
 
 body.dark .nav a {
@@ -57,33 +60,37 @@ body.dark .nav a {
 }
 
 .logo__container a {
-  margin: 0;
-  font-size: 2.2rem;
   font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2.2rem;
   font-weight: 700;
+  margin: 0;
   transition: color .5s ease;
 }
 
 .logo__container a:hover {
+  color: #0496FF;
+}
+
+body.dark .logo__container a:hover {
   color: #EA7317;
 }
 
 .links {
-  margin: 0;
-  padding: 0;
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
   height: 100%;
   justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
   width: 80%;
 }
 
 .links li {
-  width: 100%;
-  height: 100%;
   display: grid;
+  height: 100%;
   place-items: center;
+  width: 100%;
 }
 
 .links li a {
@@ -91,6 +98,7 @@ body.dark .nav a {
   height: inherit;
   place-items: center;
   width: inherit;
+  text-transform: uppercase;
 }
 
 .link {
@@ -106,22 +114,14 @@ body.dark .nav a {
   color: #F7F0F5;
 }
 
-.link a {
-  transition: color .5s ease;
-}
-
-.link.link__active {
-  background-color: #02182B;
-}
-
-.link.link__active a {
-  color: #F7F0F5;
+body.dark .link:hover {
+  background-color: #EA7317;
 }
 
 .switch {
   background: #02182B;
   border-radius: 5rem;
-  border: none;
+  border: 1px solid #000;
   cursor: pointer;
   display: flex;
   outline: none;
@@ -131,30 +131,32 @@ body.dark .nav a {
 .switch::after {
   background-color: #f1f1f1;
   border-radius: 5rem;
+  border: 1px solid #000;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   content: '';
   display: block;
   height: 2.2rem;
   left: 0;
   position: absolute;
-  right: unset;
   top: 0;
   transition: all .3s ease;
   width: 2.2rem;
 }
 
+.switch:hover::after {
+  background-color: #0496FF;
+}
+
 .switch.active {
   background-color: #EA7317;
-  color: #000;
 }
 
 .switch.active::after {
-  left: unset;
-  right: 0;
+  left: calc(78px - 2.2rem);
 }
 
-.switch:hover::after {
-  background-color: #0496FF;
+.switch.active:hover::after {
+  background-color: #EA7317;
 }
 
 .switch span {
@@ -173,46 +175,46 @@ body.dark .nav a {
 @media screen and (max-width: 800px) {
   .nav {
     padding-right: 0;
-    box-shadow: none;
   }
   .toggle {
+    cursor: pointer;
     display: block;
     font-size: 2.5rem;
-    padding-right: 1rem;
     padding-left: 1rem;
-    transition: transform .5s ease, color .5s ease;
-    cursor: pointer;
+    padding-right: 1rem;
     position: relative;
+    transition: transform .5s ease,color .5s ease;
     z-index: 1001;
   }
   .toggle:hover {
+    color: #0496FF;
+  }
+  body.dark .toggle:hover {
     color: #EA7317;
   }
   .toggle_animation {
+    color: #F7F0F5;
     transform: rotate(180deg);
-    color: #EA7317;
   }
   .links {
+    background-color: #0496FF;
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 4rem;
     position: absolute;
     right: 0;
     top: 0rem;
-    z-index: 1000;
-    background-color: #F7F0F5;
-    flex-flow: column nowrap;
-    min-height: 100vh;
-    height: 100%;
-    justify-content: flex-start;
-    width: 0px;
     transition: width .5s ease;
-    background-color: #e5e5e2;
-    padding-top: 4rem;
-    border-left: 1px solid #e5e5e2;
+    width: 0px;
+    z-index: 1000;
   }
   .links li {
     height: auto;
     padding: .8rem 1.6rem;
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity .3s ease,background-color .5s ease;
     place-items: right;
     padding-right: 1rem;
   }
@@ -221,9 +223,15 @@ body.dark .nav a {
     width: 100%;
     height: 100%;
     text-align: right;
+    color: #F7F0F5;
+    font-size: 1.3rem;
+    text-transform: uppercase;
   }
   .links .btn_switch {
     margin-top: auto;
+  }
+  body.dark .links {
+    background-color: #020300;
   }
   .hide {
     width: 375px;
