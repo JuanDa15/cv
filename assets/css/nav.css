@@ -179,12 +179,16 @@ body.dark .nav a {
     display: block;
     font-size: 2.5rem;
     padding-right: 1rem;
+    padding-left: 1rem;
     transition: transform .5s ease, color .5s ease;
     cursor: pointer;
     position: relative;
     z-index: 1001;
   }
   .toggle:hover {
+    color: #EA7317;
+  }
+  .toggle_animation {
     transform: rotate(180deg);
     color: #EA7317;
   }
@@ -202,6 +206,7 @@ body.dark .nav a {
     transition: width .5s ease;
     background-color: #e5e5e2;
     padding-top: 4rem;
+    border-left: 1px solid #e5e5e2;
   }
   .links li {
     height: auto;
