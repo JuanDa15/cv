@@ -186,7 +186,7 @@
     min-height: 100vh;
     height: 100%;
     justify-content: flex-start;
-    width: 0px;
+    width: 375px;
     transition: width .5s ease;
     background-color: $gray;
     padding-top: 4rem;
@@ -213,7 +213,7 @@
   }
 
   .hide{
-    width: 375px;
+    width: 0px;
 
     li{
       opacity: 1;
