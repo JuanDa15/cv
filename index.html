@@ -7,24 +7,34 @@
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/1262f6c46a.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav  class="nav">
-    <div class="logo__container">
-      <p>Juan David</p>
-    </div>
-    <div class="links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Sobre mi</a></li>
-      <li><a href="#">Proyectos</a></li>
-      <li><a href="#">Contactame</a></li>
-      <li>
-        <button class="switch" id="switch">
-          <span><i class="fas fa-sun"></i></span>
-          <span><i class="fas fa-moon"></i></span>
-        </button>
-      </li>
+    <div class="container">
+      <div class="logo__container">
+        <a href="#">JDOO</a>
+      </div>
+      <div class="toggle" id="toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="links hide">
+        <li class="link"><a href="#">Inicio</a></li>
+        <li class="link"><a href="#">Sobre mi</a></li>
+        <li class="link"><a href="#">Proyectos</a></li>
+        <li class="link"><a href="#">Contactame</a></li>
+        <li class="btn_switch">
+          <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 

@@ -1,43 +1,37 @@
+// Theme 1
+// Background-color
+$white: #F7F0F5;
+// Borders
+$gray: #e5e5e2; 
+// Theme 2
+
+$decorator-1: #EA7317;
+$decorator-2: #0496FF;
+
+$optional-1:#006BA6;
+$optional-2: #02182B;
+
+$dark-1: #191716;
+$dark-2: #070600;
+$dark-3: #020300;
+
+$dark-gray: #262730;
+
+// $x: #DDCECD;
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
+
 body{
   margin: 0;
   padding: 0;
   transition: all .5s ease;
+  background-color: $white !important;
+  overflow-x: hidden;
 
   &.dark{
-    background-color: #232324;
+    background-color: $dark-1 !important;
   }
-}
-
-.nav{
-  align-items: center;
-  border-bottom: 1px solid #666;
-  display: flex;
-  flex-flow: row nowrap;
-  height: 4rem;
-  justify-content: space-between;
-  margin-top: -1rem;
-  padding: .5rem;
-  position: sticky;
-  top: 0;
-  transition: all .5s ease;
-
-  body.dark &{
-    background-color: #000;
-    color: #fff;
-    
-    a{
-      color: #fff;
-    }
-  }
-}
-
-.links{
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  height: 100%;
-  justify-content: space-evenly;
-  width: 80%;
 }
 
 .card{
@@ -47,47 +41,6 @@ body{
   width: 300px;
 }
 
-.switch{
-  background: #343d5b;
-  border-radius: 5rem;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  outline: none;
-  position: relative;
-
-  &::after{
-    background-color: #f1f1f1;
-    border-radius: 5rem;
-    box-shadow: 0 0 2px 2px rgba($color: #000000, $alpha: 0.2);
-    content: '';
-    display: block;
-    height: 2.2rem;
-    left: 0;
-    position: absolute;
-    right: unset;
-    top: 0;
-    transition: all .3s ease;
-    width: 2.2rem;
-  }
-  &.active{
-    background-color: orange;
-    color: #000;
-    &::after{
-      left: unset;
-      right: 0;
-    }
-  }
-
-  span{
-    background: none;
-    color: #fff;
-    display: block;
-    height: 2rem;
-    line-height: 2rem;
-    width: 2rem;
-  }
-}
 
 // .dark{
 
